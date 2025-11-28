@@ -1,0 +1,86 @@
+let age: Int = 22
+
+// 1. String interpolation
+print("Hi, My age is \(age)") // Hi, My age is 22
+
+// 2. Diffenrence between print and dump
+class Person {
+    var name: String = "nabeen"
+    var age: Int = 22
+}
+
+let nabeen: Person = Person()
+
+print(nabeen)
+// __lldb_expr_6.Person
+
+print("\n##############\n")
+
+dump(nabeen)
+//  __lldb_expr_6.Person #0
+//  - name: "nabeen"
+//  - age: 22
+
+// 3. Declare constant and variable
+// let: Declare constant. Can not change. Can assign after.
+// var: Declare variable. Can assign after. If It's not assigned, you can't use it.
+// If the type is clear, it can be omitted.
+let a: Int = 3
+var b: Int = 4
+
+// 4. Swift default data type
+// Bool(Can't 0 or 1), Int, UInt(Can't input Int), Float(32bit floating point. Can't input Double),
+// Double(64bit floating point. Can't input Float), Character(Double quotes. 1 Character.), String(Can't input Character)
+
+var someBool: Bool = true
+
+var someInt: Int = 100
+
+var someUint: UInt = 10
+
+var someFloat: Float = 3.14
+
+var someDouble: Double = 3.14
+
+var someCharacter: Character = "1"
+
+var someString: String = "Hi 👋👋👋"
+
+// 5. Other swift data types
+// Any(Any types, But can't input nil), AnyObject, nil(NULL)
+var someAny: Any = 3
+
+class SomeClass {}
+var someAnyObject: AnyObject = SomeClass()
+
+// 6. Swift Collection types
+// Array(has various initialization methods. If you try to access unassigned, it returns error.), Dictionary(key-value), Set(only member)
+
+// Array
+var integers: Array<Int> = Array<Int>()
+var doubles: Array<Double> = [Double]()
+var strings: [String] = [String]()
+
+integers.append(1)
+integers.remove(at: 0)
+integers.removeLast()
+integers.removeAll()
+integers.count
+
+// Dictionary
+var anyDictionary: Dictionary<String, Any> = [String: Any]()
+
+anyDictionary["someKey"] = "value"
+anyDictionary["someKey"] = nil
+
+// Set
+var setA: Set<Int> = Set<Int>()
+var setB: Set<Int> = Set<Int>()
+setA.insert(3)
+setA.contains(3)
+setA.remove(3)
+setA.count
+setA.union(setB)
+setA.intersection(setB)
+setA.subtracting(setB)
+setA.sorted() // returns array
