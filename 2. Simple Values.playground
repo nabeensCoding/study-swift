@@ -1,0 +1,35 @@
+// 1. Declare constant and variable
+// let: Declare constant.
+// Can not change.
+// Can assign after.
+// var: Declare variable. Can assign after. If It's not assigned, you can't use it.
+// If the type is clear, it can be omitted.
+let a: Int = 3
+var b: Int = 4
+
+// 2. Swift default data type
+// Bool(Can't 0 or 1)
+// Int, UInt(Can't input Int)
+// Float(32bit floating point. Can't input Double),Double(64bit floating point. Can't input Float)
+// String(Can't input Character), Character(Double quotes. 1 Character.)
+
+var someBool: Bool = true
+
+var someInt: Int = 100
+
+var someUint: UInt = 10
+
+var someFloat: Float = 3.14
+
+var someDouble: Double = 3.14
+
+var someCharacter: Character = "1"
+
+var someString: String = "Hi 👋👋👋"
+
+// 3. Other swift data types
+// Any(Any types, But can't input nil), AnyObject, nil(NULL)
+var someAny: Any = 3
+
+class SomeClass {}
+var someAnyObject: AnyObject = SomeClass()
